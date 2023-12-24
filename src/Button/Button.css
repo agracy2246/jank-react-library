@@ -6,12 +6,12 @@
   }
   
   [data-button~="kind:primary"] {
-    background-color: #000000;
+    background-color: red;
     color: #ffffff;
   }
   
   [data-button~="kind:secondary"] {
     background-color: #ffffff;
-    color: #000000;
+    color: red;
   }
   

@@ -4,6 +4,9 @@
   font-weight: bold;
   border: 1px solid red;
 }
+[data-button]:hover {
+  cursor: pointer;
+}
 
 [data-button~="kind:primary"] {
   background-color: red;

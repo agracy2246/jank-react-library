@@ -11,13 +11,25 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build": "vite build && tsc"
+    "build": "vite build && tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-vite": "^7.6.6",
+    "@storybook/test": "^7.6.6",
     "@types/react": "^18.0.27",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.6",
     "typescript": "^4.9.4",
     "vite": "^4.4.12"
   },
@@ -27,5 +39,4 @@
   "publishConfig": {
     "@agracy2246:registry": "https://npm.pkg.github.com"
   }
- }
- 
+}

@@ -1,17 +1,17 @@
 [data-button] {
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: 1px solid #000000;
-  }
-  
-  [data-button~="kind:primary"] {
-    background-color: red;
-    color: #ffffff;
-  }
-  
-  [data-button~="kind:secondary"] {
-    background-color: #ffffff;
-    color: red;
-  }
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: 1px solid red;
+}
+
+[data-button~="kind:primary"] {
+  background-color: red;
+  color: #ffffff;
+}
+
+[data-button~="kind:secondary"] {
+  background-color: #ffffff;
+  color: red;
+}
   

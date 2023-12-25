@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {Button} from '.';
+import {Button} from './Button';
 
 const meta: Meta<typeof Button> = {
     title: 'Button',
     component: Button,
+    tags: ['autodocs'],
     parameters: {
         // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
         layout: 'centered',
@@ -19,6 +20,7 @@ export const Primary: Story = {
         kind: 'primary',
         disabled: false,
         children: 'Button',
+        theme: 'dark'
     },
 };
 
@@ -27,5 +29,6 @@ export const Secondary: Story = {
         kind: 'secondary',
         disabled: false,
         children: 'Button',
+        theme: 'dark'
     }
 };

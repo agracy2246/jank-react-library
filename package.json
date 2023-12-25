@@ -38,5 +38,8 @@
   },
   "publishConfig": {
     "@agracy2246:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
   }
 }

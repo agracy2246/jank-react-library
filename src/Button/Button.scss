@@ -1,0 +1,33 @@
+@import '../styles/theme';
+@import '../styles/dark-theme';
+
+[data-button] {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 1px solid $primary-100;
+}
+
+[data-button]:hover {
+    cursor: pointer;
+}
+[data-button][data-button~="kind:primary"][data-theme~="dark"] {
+    @each $property, $value in $button-primary-dark {
+        #{$property}: #{$value};
+    }
+    transition: background-color 0.11s ease, color 0.2s ease;
+    &:hover {
+        background-color: $button-primary-hover-dark-color;
+        color: $button-text;
+    }
+}
+[data-button][data-button~="kind:secondary"][data-theme~="dark"] {
+    @each $property, $value in $button-secondary-dark {
+        #{$property}: #{$value};
+    }
+    transition: background-color 0.17s ease, color 0.3s ease;
+    &:hover {
+        background-color: $button-secondary-hover-dark-color;
+        color: $button-text;
+    }
+}

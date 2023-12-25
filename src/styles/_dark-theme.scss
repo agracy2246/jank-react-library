@@ -1,0 +1,52 @@
+$background-color: #343a40;
+$text-color: #f8f9fa;
+$button-bg: #375a7f;
+$button-text: #f8f9fa;
+
+// Dark/Mixed - 100: For body background color
+// Dark/Mixed - 200: For cards background color
+// Dark/Mixed - 300: For chips buttons, dropdowns background color
+
+/** SCSS DARK THEME PRIMARY COLORS */
+$primary-100: #0ee315;
+// Accents for primary-100
+$primary-100-accent-blue: #0e71e3;
+$primary-100-accent-pink: #e30edc;
+$primary-100-accent-orange: #e3800e;
+
+$primary-200: #4fe740;
+$primary-300: #6feb5d;
+$primary-400: #89ee76;
+$primary-500: #a0f28e;
+$primary-600: #b5f5a4;
+/** SCSS DARK THEME SURFACE COLORS */
+$surface-100: #121212;
+$surface-200: #282828;
+$surface-300: #3f3f3f;
+$surface-400: #575757;
+$surface-500: #717171;
+$surface-600: #8b8b8b;
+/** SCSS DARK THEME MIXED SURFACE COLORS */
+$surface-mixed-100: #1a2417;
+$surface-mixed-200: #2f392c;
+$surface-mixed-300: #464e43;
+$surface-mixed-400: #5e655b;
+$surface-mixed-500: #767d74;
+$surface-mixed-600: #90968e;
+
+$button-primary-dark: (
+    "background-color": $primary-100,
+    "border": "1px solid darken($primary-100, 15%)",
+    "color": "white"
+    // find a font
+);
+$button-secondary-dark: (
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border": "1px solid darken($primary-100, 15%)",
+    "color": $primary-100
+    // find a font
+);
+
+// When the button is secondary, hover color should be the color of the primary button background
+$button-secondary-hover-dark-color: $primary-100;
+$button-primary-hover-dark-color: darken($primary-100, 10%);

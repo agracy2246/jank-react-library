@@ -1,7 +1,7 @@
 {
-  "name": "@agracy2246/react-library",
+  "name": "@agracy2246/jank-react-library",
   "private": false,
-  "version": "0.0.2-preview",
+  "version": "0.0.3-preview",
   "description": "",
   "main": "dist/index.umd.js",
   "module": "dist/index.mjs",
@@ -15,7 +15,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "author": "",
+  "author": "Adam Gracy",
   "license": "ISC",
   "devDependencies": {
     "@storybook/addon-controls": "^7.6.6",

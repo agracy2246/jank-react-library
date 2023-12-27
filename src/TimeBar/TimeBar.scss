@@ -1,5 +1,12 @@
+@import '../styles/dark-theme';
+
 .timebar {
     height: 50px;
-    width: 150px;
-    background-color: brown;
+    width: 100%;
+    background-color: red;
+    background: linear-gradient(to left, red, maroon);
+}
+.timebar-progress {
+    background-color: $primary-100;
+    background: linear-gradient(to left, $primary-100, green);
 }

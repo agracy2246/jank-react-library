@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { TimeBar } from './TimeBar';
-
+import { withDecorator } from './decorator';
 const meta: Meta<typeof TimeBar> = {
     title: 'TimeBar',
     component: TimeBar,
@@ -12,15 +12,23 @@ const meta: Meta<typeof TimeBar> = {
     },
 }
 export default meta;
+type TimeBarStory = StoryObj<typeof TimeBar>; // May need to rename to Story
 
-type Story = StoryObj<typeof TimeBar>;
-
-export const Full: Story = {
+export const Full: TimeBarStory = {
     args: {
         theme: 'dark',
         active: true,
         id: 'tb-1',
-        progress: 10
+        progress: 80
     },
+    argTypes: {
+        progress: {
+            control: {
+                type: 'range',
+                min: 0, max: 100,
+                step: 1
+            }
+        }
+    },
+    decorators: [withDecorator]
 };
-

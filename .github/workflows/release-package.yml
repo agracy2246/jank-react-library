@@ -49,6 +49,10 @@ jobs:
       with:
         node-version: 16
         registry-url: https://npm.pkg.github.com/
-    - run: echo "Hello, World!"
+    - run: npm ci
+    - run: echo "PACKAGE_NAME=$(node -p \"require('./package.json').name + '-dev-preview-2'\")" >> $GITHUB_ENV
+    - run: npm run build
+    - run: npm version $PACKAGE_NAME
+    - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

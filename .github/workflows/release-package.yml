@@ -51,8 +51,7 @@ jobs:
         registry-url: https://npm.pkg.github.com/
     - run: npm ci
     - run: |
-        PACKAGE_NAME=$(node -p "require('./package.json').name + '-dev-preview-2'")
-        echo "PACKAGE_NAME=$PACKAGE_NAME" >> $GITHUB_ENV
+        jq '.name |= . + "-dev-preview-2"' package.json > temp.json && mv temp.json package.json
     - run: npm run build
     - run: npm version $PACKAGE_NAME
     - run: npm publish

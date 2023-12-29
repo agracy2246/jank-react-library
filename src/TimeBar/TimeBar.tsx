@@ -10,10 +10,14 @@ export interface TimeBarProps extends React.ComponentProps<"div">, ThemeProp {
 }
 
 export function TimeBar({ progress, id, active, theme, ...props }: TimeBarProps) {
+
+    function handleOnDrag() {
+        console.log('ok drag');
+    }
+
     return (
-        <div className={classNames('timebar')} data-theme={theme} data-timebar-active={active} id={id} key={id} {...props}>
+        <div  draggable className={classNames('timebar')} data-theme={theme} data-timebar-active={active} id={id} key={id} {...props}>
             <div className={classNames('timebar-progress')} style={{width: `${progress}%`, height: '100%'}}>
-                
             </div>
         </div>
     );

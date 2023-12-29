@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-
+import { themes } from '@storybook/theming';
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -9,6 +9,10 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    
+    darkMode: {
+      classTarget: 'html'
+    }
   },
 };
 

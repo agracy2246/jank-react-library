@@ -46,7 +46,7 @@ const move = (
 export interface DnDContextProps extends ThemeProp {
 }
 
-const DnDContext = ({theme}: DnDContextProps): React.ComponentType<any> => {
+const DnDContext = () => {
 
     const [activeList, setActiveList] = useState<Item[]>(getItems(5, 0));
     const [inactiveList, setInactiveList] = useState<Item[]>(getItems(5, 5));

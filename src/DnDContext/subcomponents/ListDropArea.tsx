@@ -4,10 +4,10 @@ import { TimeBar } from '../../TimeBar';
 const grid = 8;
 
 const getListStyle = (isDraggingOver: boolean): React.CSSProperties => ({
-    background: isDraggingOver ? 'lightblue' : 'black',
+    background: isDraggingOver ? 'transparent' : 'transparent',
     padding: `${grid}`,
     width: 250,
-    backgroundColor: 'black',
+    backgroundColor: 'transparent',
     transition: 'none'
 
 });
@@ -15,16 +15,16 @@ const getItemStyle = (isDragging: boolean, draggableStyle: DraggingStyle | NotDr
     console.log(draggableStyle)
     return {
         userSelect: 'none',
-        padding: `${grid * 2}px`,
-        margin: `0 0 ${grid}px 0`,
+        padding: `5`,
+        margin: `8px 0 ${grid}px 0`,
         // change background colour if dragging
-        background: isDragging ? 'lightgreen' : 'grey',
+        background: isDragging ? 'lightgreen' : '#0e71e3',
         // styles we need to apply on draggables
         ...draggableStyle
     }
 };
 
-const ListDropArea = ({ activeList, droppableId }: {activeList: Item[], droppableId: DroppableId}) => {
+const ListDropArea = ({ activeList, droppableId, progress }: {activeList: Item[], droppableId: DroppableId, progress: number}) => {
     return (
         <Droppable droppableId={droppableId}>
             {(provided, snapshot) => (
@@ -46,7 +46,7 @@ const ListDropArea = ({ activeList, droppableId }: {activeList: Item[], droppabl
                                         provided.draggableProps.style
                                     )}>
                                     {/* {item.content} */}
-                                    <TimeBar progress={45} active id={item.content}/>
+                                    <TimeBar progress={progress} active id={item.content}/>
                                 </div>
                             )}
                         </Draggable>

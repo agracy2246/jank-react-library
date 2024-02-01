@@ -44,9 +44,10 @@ const move = (
 };
 
 export interface DnDContextProps extends ThemeProp {
+    progress: number;
 }
 
-const DnDContext = () => {
+const DnDContext = ({theme, progress}: DnDContextProps) => {
 
     const [activeList, setActiveList] = useState<Item[]>(getItems(5, 0));
     const [inactiveList, setInactiveList] = useState<Item[]>(getItems(5, 5));
@@ -93,8 +94,8 @@ const DnDContext = () => {
         <>
             <DragDropContext onDragEnd={onDragEnd}>
                 <div style={{display: 'flex' ,flexDirection: 'row', gap: '10px'}}>
-                    <ListDropArea activeList={activeList} droppableId={'active'}/>
-                    <ListDropArea activeList={inactiveList} droppableId={'inactive'}/>
+                    <ListDropArea progress={progress} activeList={activeList} droppableId={'active'}/>
+                    <ListDropArea progress={progress} activeList={inactiveList} droppableId={'inactive'}/>
                 </div>
             </DragDropContext>
         </>

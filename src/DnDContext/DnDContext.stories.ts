@@ -18,5 +18,14 @@ export const MyDragNDrop: Story = {
     args: {
         theme: 'dark'
     },
+    argTypes: {
+        progress: {
+            control: {
+                type: 'range',
+                min: 0, max: 100,
+                step: 1
+            }
+        }
+    },
 };
 
